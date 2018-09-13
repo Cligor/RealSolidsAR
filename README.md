@@ -1,4 +1,3 @@
-############################## Real Solids ###############################
 Este é um app criado pela equipe PRISMA do Instituto Federal do Paraná - Campus Paranavaí.
 Ele é finalista da maratona Samsung Tecnologias Móveis na Escola e na sua concepção houveram participações das seguintes pessoas:
 
