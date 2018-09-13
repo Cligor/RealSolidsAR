@@ -34,7 +34,7 @@ export default class Apresentacao extends Component {
             const i = this.state.indice;
             this.setState({ indice: i + 1 });
         } else {
-            Actions.paralelepipedo();
+            Actions.cilindro();
         }
     }
 
