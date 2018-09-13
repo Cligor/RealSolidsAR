@@ -19,6 +19,8 @@ import MaspContorno from '../exercicio_contorno/MaspContorno';
 import CatedralContorno from '../exercicio_contorno/CatedralContorno';
 import OperaArameContorno from '../exercicio_contorno/OperaArameContorno';
 import PracaRibeiraContorno from '../exercicio_contorno/PracaRibeiraContorno';
+import TesteAR from '../App_AR';
+import Branco from './branco'
 
 
 export default class Nav extends Component {
@@ -116,6 +118,16 @@ export default class Nav extends Component {
                         key='realidade' 
                         component={Realidade} 
                         hideNavBar 
+                    />
+                    <Scene
+                        key='AR'
+                        component={TesteAR}
+                        hideNavBar
+                    />
+                    <Scene
+                        key='Branco'
+                        component={Branco}
+                        hideNavBar
                     />
                 </Stack>
             </Router>

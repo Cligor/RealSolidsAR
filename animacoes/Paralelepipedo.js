@@ -1,14 +1,36 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Dimensions  } from 'react-native';
+import { StyleSheet, View, Dimensions, TouchableOpacity, Image } from 'react-native';
 import Video from 'react-native-video';
-
+import { Actions } from 'react-native-router-flux';
+import next from '../images/icons/next.png';
 export default class Paralelepipedo extends Component {
+
+    onEnd() {
+        this.player.methods.togglePlayPause();
+        Actions.AR();
+    }
+
+
+
     render() {
         return (
-            <Video 
-                source={{uri : 'videos_paralelepipedo', type: 'mp4' }}
-                style={style.backgroundVideo}
-            />
+            <View>
+                <Video
+                    ref={(ref) => {
+                        this.player = ref
+                    }} 
+                    source={{uri : 'paralelepipedo', type: 'mp4' }}
+                    style={style.backgroundVideo}
+                    onEnd={this.onEnd} 
+                />
+
+                <View style={style.button}>
+                    <TouchableOpacity onPress={() => this.onEnd()}>
+                        <Image source={next} size={32} />
+                    </TouchableOpacity>
+                </View>
+            </View>
+
         );
     }
 }
