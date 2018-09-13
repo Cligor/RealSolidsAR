@@ -1,4 +1,4 @@
-Este é um app criado pela equipe PRISMA do Instituto Federal do Paraná - Campus Paranavaí.
+Este é um app criado pela equipe PRISMA do Instituto Federal do Paraná - Campus Paranavaí. #13#10
 Ele é finalista da maratona Samsung Tecnologias Móveis na Escola e na sua concepção houveram participações das seguintes pessoas:
 
 Viviane Moretto da Silva Fuly - Idealizadora do projeto: viviane.fuly@ifpr.edu.br
