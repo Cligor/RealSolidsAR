@@ -24,7 +24,7 @@ export default class CuboAR extends Component {
                   castsShadow={true} 
                 />
                 <Viro3DObject
-                  source={require('../obj/piramide.obj')}
+                  source={require('../obj/cubo.obj')}
                   position={[0, 0, -3]}
                   scale={[.2, .2, .2]}
                   styles={styles.object}
