@@ -23,8 +23,6 @@ import CatedralContorno from '../exercicio_contorno/CatedralContorno';
 import OperaArameContorno from '../exercicio_contorno/OperaArameContorno';
 import PracaRibeiraContorno from '../exercicio_contorno/PracaRibeiraContorno';
 import TesteAR from '../App_AR';
-import Branco from './branco'
-
 
 export default class Nav extends Component {
     render() {
@@ -141,11 +139,7 @@ export default class Nav extends Component {
                         key='AR'
                         component={TesteAR}
                         hideNavBar
-                    />
-                    <Scene
-                        key='Branco'
-                        component={Branco}
-                        hideNavBar
+                        type='replace'
                     />
                 </Stack>
             </Router>

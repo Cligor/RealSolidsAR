@@ -11,7 +11,7 @@ import {
   Viro3DObject
 } from 'react-viro';
 
-export default class HelloWorldSceneAR extends Component {
+export default class CilindroAR extends Component {
   render() {
     return (
       <ViroARScene onTrackingUpdated={this._onInitialized} >
@@ -24,7 +24,7 @@ export default class HelloWorldSceneAR extends Component {
                   castsShadow={true} 
                 />
                 <Viro3DObject
-                  source={require('../obj/paralelepipedo.obj')}
+                  source={require('../obj/cilindro.obj')}
                   position={[0, 0, -3]}
                   scale={[.2, .2, .2]}
                   styles={styles.object}
@@ -42,4 +42,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = HelloWorldSceneAR;
+module.exports = CilindroAR;

@@ -3,27 +3,27 @@ import { StyleSheet, View, Dimensions, TouchableOpacity, Image } from 'react-nat
 import Video from 'react-native-video';
 import { Actions } from 'react-native-router-flux';
 import next from '../images/icons/next.png';
+import AR from '../ar/CilindroAR';
+
 export default class Cilindro extends Component {
 
     onEnd() {
-        this.player.methods.togglePlayPause();
-        Actions.AR();
+        Actions.AR({ scene: AR });
     }
-
-
 
     render() {
         return (
-            <View>
-                <Video
-                    ref={(ref) => {
-                        this.player = ref
-                    }} 
-                    source={{uri : 'cilindro', type: 'mp4' }}
-                    style={style.backgroundVideo}
-                    onEnd={this.onEnd} 
-                />
-
+            <View style={style.container}>
+                <View style={style.video}>  
+                    <Video
+                        ref={(ref) => {
+                            this.player = ref
+                        }} 
+                        source={{uri : 'cilindro', type: 'mp4' }}
+                        style={style.backgroundVideo}
+                        onEnd={() => this.onEnd()}
+                    />
+                </View>
                 <View style={style.button}>
                     <TouchableOpacity onPress={() => this.onEnd()}>
                         <Image source={next} size={32} />
@@ -45,4 +45,19 @@ const style = StyleSheet.create({
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height
     },
+
+    container: {
+        flex: 1
+    },
+
+    video: {
+        height: '70%',
+    },
+
+    button: {
+        alignItems: 'center',
+        paddingTop: '10%',
+        marginLeft: '85%',
+        borderRadius: 20,
+    }
 });
