@@ -6,7 +6,7 @@ import next from '../images/icons/next.png';
 export default class Paralelepipedo extends Component {
 
     onEnd() {
-        this.player.methods.togglePlayPause();
+        // this.player.methods.togglePlayPause();
         Actions.AR();
     }
 
@@ -21,7 +21,7 @@ export default class Paralelepipedo extends Component {
                     }} 
                     source={{uri : 'paralelepipedo', type: 'mp4' }}
                     style={style.backgroundVideo}
-                    onEnd={this.onEnd} 
+                    onEnd={this.onEnd}
                 />
 
                 <View style={style.button}>
