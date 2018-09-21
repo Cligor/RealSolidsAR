@@ -1,4 +1,4 @@
-package com.realsolidsar;
+package com.realsolids;
 
 import android.app.Application;
 

@@ -1,4 +1,4 @@
-package com.realsolidsar;
+package com.realsolids;
 
 import com.facebook.react.ReactActivity;
 
