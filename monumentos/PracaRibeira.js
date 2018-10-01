@@ -43,10 +43,15 @@ export default class Apresentacao extends Component {
                 <View 
                     style={
                             [style.innerContainer, 
-                            { alignItems: 'center', paddingTop: 20, height: '45%', }]
+                            { alignItems: 'center', paddingTop: 20, height: '50%', }]
                             }
                 >
-                    
+                      <View style={style.button}>
+                            <TouchableOpacity onPress={() => this.proximo()}>
+                                <Image source={next} size={32} />
+                            </TouchableOpacity>
+                        </View>
+
                     <Image source={cuboribeira} />
                 </View>
 
@@ -58,11 +63,7 @@ export default class Apresentacao extends Component {
                             </Text>
                         </View>
 
-                        <View style={style.button}>
-                            <TouchableOpacity onPress={() => this.proximo()}>
-                                <Image source={next} size={32} />
-                            </TouchableOpacity>
-                        </View>
+                      
                     </ImageBackground>
                 </View>
             </View>
@@ -102,7 +103,6 @@ const style = StyleSheet.create({
 
     button: {
         alignItems: 'center',
-        paddingTop: '46%',
         marginLeft: '85%',
         borderRadius: 20,
     },

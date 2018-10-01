@@ -14,6 +14,12 @@ export default class ConeCerto extends Component {
     render() {
         return (
             <View style={style.container}>
+              <View style={style.button}>
+                    <TouchableOpacity onPress={() => this.onEnd()}>
+                        <Image source={next} size={32} />
+                    </TouchableOpacity>
+                </View>
+                
                 <View style={style.video}>  
                     <Video
                         ref={(ref) => {
@@ -24,11 +30,7 @@ export default class ConeCerto extends Component {
                         onEnd={() => this.onEnd()}
                     />
                 </View>
-                <View style={style.button}>
-                    <TouchableOpacity onPress={() => this.onEnd()}>
-                        <Image source={next} size={32} />
-                    </TouchableOpacity>
-                </View>
+              
             </View>
 
         );

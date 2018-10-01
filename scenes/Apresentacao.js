@@ -44,11 +44,20 @@ export default class Apresentacao extends Component {
     render() {
         return (
             <View style={style.container}>
-                <View style={[style.innerContainer, { alignItems: 'center', paddingTop: 60, height: '30%' }]}>
-                    <Text style={style.titulo}>Real Solids</Text>
-                </View>
+                <View style={[style.innerContainer, { alignItems: 'center', marginTop: 20, height: '40%' }]}>
+                  
+                  <View style={style.button}>
+                            <TouchableOpacity onPress={() => this.proximo()}>
+                                <Image source={next} size={32} />
+                            </TouchableOpacity>
+                        </View>
 
-                <View style={[style.innerContainer, { height: '70%' }]}>
+                    <Text style={style.titulo}>Real Solids</Text>
+                </View> 
+
+                <View style={[style.innerContainer, { height: '60%' }]}>
+
+                      
                     <ImageBackground source={conversa} style={{ flex: 1 }}>
                         <View style={style.texto}>
                             <Text style={style.fala}>
@@ -56,11 +65,7 @@ export default class Apresentacao extends Component {
                             </Text>
                         </View>
 
-                        <View style={style.button}>
-                            <TouchableOpacity onPress={() => this.proximo()}>
-                                <Image source={next} size={32} />
-                            </TouchableOpacity>
-                        </View>
+                       
                     </ImageBackground>
 
                    
@@ -100,8 +105,7 @@ const style = StyleSheet.create({
     },
 
     button: {
-        alignItems: 'center',
-        paddingTop: '44.75%',
+        alignItems: 'center',       
         marginLeft: '85%',
         borderRadius: 20,
     },
