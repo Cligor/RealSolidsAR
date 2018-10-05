@@ -16,7 +16,7 @@ const sharedProps = {
 export default class Paralelepipedo extends Component {
 
     onEnd() {
-        Actions.AR({ scene: AR });
+        Actions.Botoes({ scene: AR });
     }
 
     render() {

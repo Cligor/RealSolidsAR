@@ -25,6 +25,7 @@ export default class CuboAR extends Component {
                 />
                 <Viro3DObject
                   source={require('../obj/cubo.obj')}
+                  materials={[require('../obj/cubo.mtl')]}
                   position={[0, 0, -3]}
                   scale={[.2, .2, .2]}
                   styles={styles.object}

@@ -22,6 +22,8 @@ import MaspContorno from '../exercicio_contorno/MaspContorno';
 import CatedralContorno from '../exercicio_contorno/CatedralContorno';
 import OperaArameContorno from '../exercicio_contorno/OperaArameContorno';
 import PracaRibeiraContorno from '../exercicio_contorno/PracaRibeiraContorno';
+import Botoes from '../scenes/Botoes';
+
 import TesteAR from '../App_AR';
 
 export default class Nav extends Component {
@@ -138,6 +140,12 @@ export default class Nav extends Component {
                     <Scene
                         key='AR'
                         component={TesteAR}
+                        hideNavBar
+                        type='replace'
+                    />
+                    <Scene
+                        key='Botoes'
+                        component={Botoes}
                         hideNavBar
                         type='replace'
                     />

@@ -25,6 +25,7 @@ export default class ConeAR extends Component {
                 />
                 <Viro3DObject
                   source={require('../obj/cone.obj')}
+                  materials={[require('../obj/cone.mtl')]}
                   position={[0, 0, -3]}
                   scale={[.2, .2, .2]}
                   styles={styles.object}

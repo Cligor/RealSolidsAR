@@ -11,6 +11,18 @@ import { Botao } from '../realSolids';
 import { Actions } from 'react-native-router-flux';
 
 export default class Botoes extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    menu() {
+        Actions.menu();
+    }
+
+    ar() {
+        Actions.AR({ scene: this.props.scene });
+    }
+    
     render() {
         return (
             <View style={style.container}>
@@ -22,15 +34,15 @@ export default class Botoes extends Component {
                 <View style={style.innerContainer}>
                     <View style={style.containerButtons} >
                         <Botao 
-                            style={{ backgroundColor: 'green' }} 
+                            style={{ backgroundColor: 'green', width: 300 }} 
                             text='Ver em realidade aumentada'
-                           }
+                            onPress={() => this.ar()}
                         /> 
                         
                         <Botao
-                            style={{ backgroundColor: 'green' }}
+                            style={{ backgroundColor: 'green', width: 300 }}
                             text='Ir para o menu'
-                           }
+                            onPress={() => this.menu()}
                         />
                      
                     </View>
@@ -71,7 +83,7 @@ const style = StyleSheet.create({
     containerButtons: {
         alignItems: 'center',
         justifyContent: 'space-between',
-        width: '50%',
+        width: '100%',
         padding: '2%',
     },
 

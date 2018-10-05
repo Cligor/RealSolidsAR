@@ -13,29 +13,29 @@ import {
   Viro3DObject
 } from 'react-viro';
 
-import next from '../images/icons/next.png';
 
 export default class HelloWorldSceneAR extends Component {
   render() {
     return (
-        <ViroARScene style={styles.objeto} onTrackingUpdated={this._onInitialized} >
-          <ViroAmbientLight color={"#aaaaaa"} />
-                  <ViroSpotLight 
-                    innerAngle={5} 
-                    outerAngle={90} 
-                    direction={[0,-1,-.2]}
-                    position={[0, 3, 1]} 
-                    castsShadow={true} 
-                  />
+          <ViroARScene style={styles.objeto} onTrackingUpdated={this._onInitialized} >
+            <ViroAmbientLight color={"#aaaaaa"} />
+                    <ViroSpotLight 
+                      innerAngle={5} 
+                      outerAngle={90} 
+                      direction={[0,-1,-.2]}
+                      position={[0, 3, 1]} 
+                      castsShadow={true} 
+                    />
 
-                  <Viro3DObject
-                    source={require('../obj/paralelepipedo.obj')}
-                    position={[0, 0, -3]}
-                    scale={[.2, .2, .2]}
-                    styles={styles.object}
-                    type="OBJ" 
-                  />
-      </ViroARScene>
+                    <Viro3DObject
+                      source={require('../obj/paralelepipedo.obj')}
+                      resources={[require('../obj/paralelepipedo.mtl')]}
+                      position={[0, 0, -3]}
+                      scale={[.2, .2, .2]}
+                      styles={styles.object}
+                      type="OBJ" 
+                    />
+        </ViroARScene>
     );
   }
 }
@@ -50,11 +50,10 @@ const styles = StyleSheet.create({
   },
 
   button: {
-      alignItems: 'center',
-      paddingTop: '10%',
-      marginLeft: '85%',
-      borderRadius: 20,
-  }
+    alignItems: 'center',       
+    marginLeft: '85%',
+    borderRadius: 20,
+  },
 });
 
 module.exports = HelloWorldSceneAR;

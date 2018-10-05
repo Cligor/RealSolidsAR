@@ -8,7 +8,7 @@ import AR from '../ar/CilindroAR';
 export default class Cilindro extends Component {
 
     onEnd() {
-        Actions.AR({ scene: AR });
+        Actions.Botoes({ scene: AR });
     }
 
     render() {

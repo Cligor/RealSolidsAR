@@ -8,7 +8,7 @@ import AR from '../ar/ConeAR';
 export default class ConeCerto extends Component {
 
     onEnd() {
-        Actions.AR({ scene: AR });
+        Actions.Botoes({ scene: AR });
     }
 
     render() {

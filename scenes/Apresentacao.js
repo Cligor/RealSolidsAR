@@ -46,11 +46,11 @@ export default class Apresentacao extends Component {
             <View style={style.container}>
                 <View style={[style.innerContainer, { alignItems: 'center', marginTop: 20, height: '40%' }]}>
                   
-                  <View style={style.button}>
-                            <TouchableOpacity onPress={() => this.proximo()}>
-                                <Image source={next} size={32} />
-                            </TouchableOpacity>
-                        </View>
+                    <View style={style.button}>
+                        <TouchableOpacity onPress={() => this.proximo()}>
+                            <Image source={next} size={32} />
+                        </TouchableOpacity>
+                    </View>
 
                     <Text style={style.titulo}>Real Solids</Text>
                 </View> 

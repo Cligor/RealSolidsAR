@@ -12,6 +12,14 @@ import {
 } from 'react-viro';
 
 export default class CilindroAR extends Component {
+  proximo() {
+    if (this.state.indice < 3) {
+        const i = this.state.indice;
+        this.setState({ indice: i + 1 });
+    } else {
+        Actions.menu();
+    }
+  }
   render() {
     return (
       <ViroARScene onTrackingUpdated={this._onInitialized} >
@@ -25,6 +33,7 @@ export default class CilindroAR extends Component {
                 />
                 <Viro3DObject
                   source={require('../obj/cilindro.obj')}
+                  materials={[require('../obj/cilindro.mtl')]}
                   position={[0, 0, -3]}
                   scale={[.2, .2, .2]}
                   styles={styles.object}

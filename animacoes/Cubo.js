@@ -8,7 +8,7 @@ import AR from '../ar/CuboAR';
 export default class Cubo extends Component {
 
     onEnd() {
-        Actions.AR({ scene: AR });
+        Actions.Botoes({ scene: AR });
     }
 
     render() {
