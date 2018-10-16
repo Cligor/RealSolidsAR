@@ -98,11 +98,11 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.realsolids"
+        applicationId 'com.realsolidsv2'
         minSdkVersion 23
         targetSdkVersion 26
         multiDexEnabled true
-        versionCode 1
+        versionCode 5
         versionName "1.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
@@ -166,10 +166,11 @@ android {
 
 dependencies {
     compile project(':react-native-video')
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.facebook.react:react-native:+'
-    compile project(':arcore_client') // remove this if AR not required
+    compile project(':arcore_client')
+    // remove this if AR not required
     compile project(':gvr_common')
     compile project(path: ':viro_renderer')
     compile project(path: ':react_viro')
