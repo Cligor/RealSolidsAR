@@ -25,7 +25,7 @@ export default class Cilindro extends Component {
                         ref={(ref) => {
                             this.player = ref
                         }} 
-                        source={{uri : 'cilindro', type: 'mp4' }}
+                        source={{uri : 'cilindrofinal', type: 'mp4' }}
                         style={style.backgroundVideo}
                         onEnd={() => this.onEnd()}
                     />

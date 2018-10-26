@@ -11,7 +11,8 @@ import {
 import { Actions } from 'react-native-router-flux';
 
 import next from '../images/icons/next.png';
-import conversa from '../images/mascote/tales1.png';
+import conversa from '../images/mascote/talesfinal.png';
+import logo from '../images/logo/fundonova.png';
 
 let falas = [];
 
@@ -43,34 +44,41 @@ export default class Apresentacao extends Component {
 
     render() {
         return (
-            <View style={style.container}>
-                <View style={[style.innerContainer, { alignItems: 'center', marginTop: 20, height: '40%' }]}>
-                  
-                    <View style={style.button}>
-                        <TouchableOpacity onPress={() => this.proximo()}>
-                            <Image source={next} size={32} />
-                        </TouchableOpacity>
-                    </View>
+              <ImageBackground source={logo} style={style.container} >
 
-                    <Text style={style.titulo}>Real Solids</Text>
-                </View> 
+                <View style={style.container}>
+                          
+             
+                        <View style={[style.innerContainer, { alignItems: 'center', marginTop: 20, height: '40%' }]}>
+                          
+                            <View style={style.button}>
+                                <TouchableOpacity onPress={() => this.proximo()}>
+                                    <Image source={next} size={32} />
+                                </TouchableOpacity>
+                            </View>
 
-                <View style={[style.innerContainer, { height: '60%' }]}>
+                            <Text style={style.titulo}>Real Solids</Text>
+                        </View> 
 
+                        <View style={[style.innerContainer, { height: '60%' }]}>
+
+                              
+                            <ImageBackground source={conversa} style={style.mascote}>
+                                <View style={style.texto}>
+                                    <Text style={style.fala}>
+                                        {falas[this.state.indice]}
+                                    </Text>
+                                </View>
+
+                               
+                            </ImageBackground>
+
+                           
                       
-                    <ImageBackground source={conversa} style={{ flex: 1 }}>
-                        <View style={style.texto}>
-                            <Text style={style.fala}>
-                                {falas[this.state.indice]}
-                            </Text>
-                        </View>
-
-                       
-                    </ImageBackground>
-
-                   
+                    </View>
                 </View>
-            </View>
+
+               </ImageBackground>
         );
     }
 }
@@ -78,11 +86,11 @@ export default class Apresentacao extends Component {
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFF',
     },
 
     innerContainer: {
         width: '100%',
+       
     },
 
     titulo: {
@@ -108,6 +116,10 @@ const style = StyleSheet.create({
         alignItems: 'center',       
         marginLeft: '85%',
         borderRadius: 20,
+    },
+    mascote: {
+        width: '100%',
+        height: '100%',
     },
 
     

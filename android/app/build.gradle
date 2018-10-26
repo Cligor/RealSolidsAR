@@ -99,10 +99,10 @@ android {
 
     defaultConfig {
         applicationId 'com.realsolidsv2'
-        minSdkVersion 23
+        minSdkVersion 22
         targetSdkVersion 26
         multiDexEnabled true
-        versionCode 5
+        versionCode 10
         versionName "1.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"

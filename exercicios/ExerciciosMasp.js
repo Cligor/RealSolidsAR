@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { 
     View, 
-    StyleSheet, 
+    StyleSheet,
+    ImageBackground,
     Image,
     Text,
     Alert
@@ -11,6 +12,8 @@ import { Botao } from '../realSolids';
 
 import masp from '../images/monumentos/MASP300.png';
 import { Actions } from 'react-native-router-flux';
+import logo from '../images/logo/fundonova.png';
+
 
 export default class Menu extends Component {
 
@@ -27,7 +30,7 @@ export default class Menu extends Component {
 
     render() {
         return (
-            <View style={style.container}>
+            <ImageBackground source={logo} style={style.container} >
                 <View style={[style.titleContainer, { alignItems: 'center', paddingTop: 30 }]}>
                     <Text 
                         style={style.titulo}
@@ -62,7 +65,7 @@ export default class Menu extends Component {
                     <View style={style.containerButtons}>
                         <Botao 
                             style={{ backgroundColor: 'purple' }} 
-                            text='Paralelepipedo'
+                            text='Paralelepípedo'
                             onPress={() => this.certo()}
                         />
 
@@ -74,7 +77,7 @@ export default class Menu extends Component {
                     </View>
                 </View>
 
-            </View>        
+              </ImageBackground>    
         );
     }
 }

@@ -25,7 +25,7 @@ export default class ConeCerto extends Component {
                         ref={(ref) => {
                             this.player = ref
                         }} 
-                        source={{uri : 'cone', type: 'mp4' }}
+                        source={{uri : 'conefinal', type: 'mp4' }}
                         style={style.backgroundVideo}
                         onEnd={() => this.onEnd()}
                     />

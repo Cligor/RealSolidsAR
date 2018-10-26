@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { 
     View, 
     StyleSheet, 
+    ImageBackground,
     TouchableOpacity,
     Text
 } from 'react-native';
@@ -10,10 +11,12 @@ import { Botao } from '../realSolids';
 
 import { Actions } from 'react-native-router-flux';
 
+import logo from '../images/logo/fundonova.png';
+
 export default class Menu extends Component {
     render() {
         return (
-            <View style={style.container}>
+           <ImageBackground source={logo} style={style.container} >
                 <View style={[style.titleContainer, { alignItems: 'center', paddingTop: 60 }]}>
                     <Text style={style.titulo}>Real Solids</Text>
                 </View>
@@ -52,7 +55,7 @@ export default class Menu extends Component {
                     </View>
                 </View>
 
-            </View>        
+              </ImageBackground>       
         );
     }
 }

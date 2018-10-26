@@ -11,8 +11,10 @@ import {
 import { Actions } from 'react-native-router-flux';
 
 import next from '../images/icons/next.png';
-import conversa from '../images/mascote/tales3.png';
+import conversa from '../images/mascote/talesfinal.png';
 import masp from '../images/monumentos/OPERADEARAME-Contorno300.png';
+
+import logo from '../images/logo/fundonova.png';
 
 let falas = [];
 
@@ -40,7 +42,7 @@ export default class Apresentacao extends Component {
 
     render() {
         return (
-            <View style={style.container}>
+              <ImageBackground source={logo} style={style.container} >
                 <View 
                     style={
                             [style.innerContainer, 
@@ -69,7 +71,7 @@ export default class Apresentacao extends Component {
 
                    
                 </View>
-            </View>
+            </ImageBackground>
         );
     }
 }
@@ -77,7 +79,6 @@ export default class Apresentacao extends Component {
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFF',
     },
 
     innerContainer: {

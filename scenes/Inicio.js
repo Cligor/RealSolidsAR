@@ -7,7 +7,7 @@ import { View,
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
-import logo from '../images/logo/LogoOpaca500x500.png';
+import logo from '../images/logo/logoNova.png';
 
 export default class Inicio extends Component {
 

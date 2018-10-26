@@ -25,7 +25,7 @@ export default class Cubo extends Component {
                         ref={(ref) => {
                             this.player = ref
                         }} 
-                        source={{uri : 'cubo', type: 'mp4' }}
+                        source={{uri : 'cubofinal', type: 'mp4' }}
                         style={style.backgroundVideo}
                         onEnd={() => this.onEnd()}
                     />

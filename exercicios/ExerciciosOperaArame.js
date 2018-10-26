@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { 
     View, 
     StyleSheet, 
+    ImageBackground,
     Image,
     Text,
     Alert
@@ -11,6 +12,8 @@ import { Botao } from '../realSolids';
 
 import opera from '../images/monumentos/OPERADEARAME300.png';
 import { Actions } from 'react-native-router-flux';
+import logo from '../images/logo/fundonova.png';
+
 
 export default class Menu extends Component {
 
@@ -24,7 +27,7 @@ export default class Menu extends Component {
 
     render() {
         return (
-            <View style={style.container}>
+            <ImageBackground source={logo} style={style.container} >
                 <View style={[style.titleContainer, { alignItems: 'center', paddingTop: 30 }]}>
                     <Text style={style.titulo}>Qual sólido geométrico você identifica nessa imagem ?</Text>
                 </View>
@@ -68,7 +71,7 @@ export default class Menu extends Component {
                     </View>
                 </View>
 
-            </View>        
+               </ImageBackground>      
         );
     }
 }
