@@ -15,22 +15,12 @@ export default class CuboAR extends Component {
   render() {
     return (
       <ViroARScene onTrackingUpdated={this._onInitialized} >
-        <ViroAmbientLight color={"#aaaaaa"} />
-                <ViroSpotLight 
-                  innerAngle={5} 
-                  outerAngle={90} 
-                  direction={[0,-1,-.2]}
-                  position={[0, 3, 1]} 
-                  castsShadow={true} 
-                />
+        <ViroAmbientLight color={"#FFFFFF"} />
                 <Viro3DObject
-                  source={require('../obj/cubo.obj')}
-                  materials={[require('../obj/cubo.mtl')]}
-                  position={[0, 0, -3]}
+                  source={require('../obj/cubo.vrx')}
+                  position={[-.5, .5, -1]}
                   scale={[.2, .2, .2]}
-                  styles={styles.object}
-                  type="OBJ" 
-                />
+                  type="VRX" />
       </ViroARScene>
     );
   }

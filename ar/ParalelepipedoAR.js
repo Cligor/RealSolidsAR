@@ -10,7 +10,8 @@ import {
   ViroARScene,
   ViroAmbientLight,
   ViroSpotLight,
-  Viro3DObject
+  Viro3DObject,
+  ViroMaterials
 } from 'react-viro';
 
 
@@ -18,7 +19,7 @@ export default class HelloWorldSceneAR extends Component {
   render() {
     return (
           <ViroARScene style={styles.objeto} onTrackingUpdated={this._onInitialized} >
-            <ViroAmbientLight color={"#aaaaaa"} />
+            <ViroAmbientLight color={"#FFFFFF"} />
                     <ViroSpotLight 
                       innerAngle={5} 
                       outerAngle={90} 
@@ -29,16 +30,26 @@ export default class HelloWorldSceneAR extends Component {
 
                     <Viro3DObject
                       source={require('../obj/paralelepipedo.obj')}
-                      resources={[require('../obj/paralelepipedo.mtl')]}
+                      resources={[require('../obj/paralelepipedo.mtl'),
+                                 require('../obj/paralelepipedo.png') ]}
                       position={[0, 0, -3]}
                       scale={[.2, .2, .2]}
                       styles={styles.object}
+                      // materials={['heart']}
                       type="OBJ" 
                     />
         </ViroARScene>
     );
   }
 }
+
+ViroMaterials.createMaterials({
+  heart: {
+    lightingModel: "Lambert",
+    diffuseTexture: require('../obj/paralelepipedo.png'),
+    normalTexture: require('../obj/paralelepipedo.png'),
+   },
+});
 
 const styles = StyleSheet.create({
   container: {
