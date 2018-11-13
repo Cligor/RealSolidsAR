@@ -8,18 +8,28 @@ import Menu from '../scenes/Menu';
 import Masp from '../monumentos/Masp';
 import PracaRibeira from '../monumentos/PracaRibeira';
 import Catedral from '../monumentos/Catedral';
+import ErmidaMonumento from '../monumentos/Ermida';
+import LouvreMonumento from '../monumentos/Louvre';
 import OperaArame from '../monumentos/OperaArame';
 import ExerciciosMasp from '../exercicios/ExerciciosMasp';
 import ExerciciosPracaRibeira from '../exercicios/ExerciciosPracaRibeira';
 import ExerciciosOperaArame from '../exercicios/ExerciciosOperaArame';
 import ExerciciosCatedral from '../exercicios/ExerciciosCatedral';
+import ExerciciosErmida from '../exercicios/ExerciciosErmida';
+import ExerciciosLouvre from '../exercicios/ExerciciosLouvre';
 import Paralelepipedo from '../animacoes/Paralelepipedo';
 import ConeCerto from '../animacoes/ConeCerto';
+import Louvre from '../animacoes/Louvre';
+import Ermida from '../animacoes/Ermida';
 import Cilindro from '../animacoes/Cilindro';
 import Cubo from '../animacoes/Cubo';
 import Cone from '../animacoes/Cone';
 import MaspContorno from '../exercicio_contorno/MaspContorno';
 import CatedralContorno from '../exercicio_contorno/CatedralContorno';
+
+import LouvreContorno from '../exercicio_contorno/LouvreContorno';
+import ErmidaContorno from '../exercicio_contorno/ErmidaContorno';
+
 import OperaArameContorno from '../exercicio_contorno/OperaArameContorno';
 import PracaRibeiraContorno from '../exercicio_contorno/PracaRibeiraContorno';
 import Botoes from '../scenes/Botoes';
@@ -42,6 +52,16 @@ export default class Nav extends Component {
                         component={Cubo} 
                         hideNavBar 
                     />
+                      <Scene 
+                        key='louvreMonumento' 
+                        component={LouvreMonumento} 
+                        hideNavBar 
+                    />
+                      <Scene 
+                        key='ermidaMonumento' 
+                        component={ErmidaMonumento} 
+                        hideNavBar 
+                    />
                      <Scene 
                         key='cilindro' 
                         component={Cilindro} 
@@ -50,6 +70,16 @@ export default class Nav extends Component {
                      <Scene 
                         key='coneCerto' 
                         component={ConeCerto} 
+                        hideNavBar 
+                    />
+                     <Scene 
+                        key='ermida' 
+                        component={Ermida} 
+                        hideNavBar 
+                    />
+                     <Scene 
+                        key='louvre' 
+                        component={Louvre} 
                         hideNavBar 
                     />
                     <Scene 
@@ -92,6 +122,16 @@ export default class Nav extends Component {
                         component={ExerciciosCatedral} 
                         hideNavBar 
                     />
+                       <Scene 
+                        key='exerciciosLouvre' 
+                        component={ExerciciosLouvre} 
+                        hideNavBar 
+                    />
+                       <Scene 
+                        key='exerciciosErmida' 
+                        component={ExerciciosErmida} 
+                        hideNavBar 
+                    />
                     <Scene 
                         key='exerciciosPracaRibeira' 
                         component={ExerciciosPracaRibeira} 
@@ -125,6 +165,16 @@ export default class Nav extends Component {
                       <Scene 
                         key='operaArameContorno' 
                         component={OperaArameContorno} 
+                        hideNavBar 
+                    />
+                       <Scene 
+                        key='louvreContorno' 
+                        component={LouvreContorno} 
+                        hideNavBar 
+                    />
+                       <Scene 
+                        key='ermidaContorno' 
+                        component={ErmidaContorno} 
                         hideNavBar 
                     />
                        <Scene 

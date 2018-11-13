@@ -98,11 +98,11 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId 'com.realsolids'
+        applicationId 'com.realsolid'
         minSdkVersion 22
         targetSdkVersion 26
         multiDexEnabled true
-        versionCode 10
+        versionCode 13
         versionName "1.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"

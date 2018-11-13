@@ -36,6 +36,14 @@ export default class Menu extends Component {
                             text='Catedral de Maringá'
                             onPress={() => Actions.catedral()}
                         />
+
+                        <Botao
+                            style={{ backgroundColor: 'blue' }}
+                            text='Ermida'
+                            onPress={() => Actions.ermidaMonumento()}
+                        />
+
+
                         { /* adicionar outros botões mais botões */}
                     </View>
 
@@ -52,6 +60,13 @@ export default class Menu extends Component {
                             text='Ópera de Arame'
                             onPress={() => Actions.operaArame()}
                         />
+
+                        <Botao 
+                            style={{ backgroundColor: 'green' }} 
+                            text='Louvre'
+                            onPress={() => Actions.louvreMonumento()}
+                        />
+
                     </View>
                 </View>
 
