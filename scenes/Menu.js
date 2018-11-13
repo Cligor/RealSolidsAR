@@ -38,7 +38,7 @@ export default class Menu extends Component {
                         />
 
                         <Botao
-                            style={{ backgroundColor: 'blue' }}
+                            style={{ backgroundColor: 'orange' }}
                             text='Ermida'
                             onPress={() => Actions.ermidaMonumento()}
                         />
@@ -62,7 +62,7 @@ export default class Menu extends Component {
                         />
 
                         <Botao 
-                            style={{ backgroundColor: 'green' }} 
+                            style={{ backgroundColor: 'gray' }} 
                             text='Louvre'
                             onPress={() => Actions.louvreMonumento()}
                         />

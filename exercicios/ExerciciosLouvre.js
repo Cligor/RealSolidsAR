@@ -58,7 +58,7 @@ export default class Menu extends Component {
                     { /* Coluna 2 */ }
                     <View style={style.containerButtons}>
 
-                         <Botao 
+                        <Botao 
                             style={{ backgroundColor: 'red' }} 
                             text='Cubo'
                             onPress={() => this.errado('um Cubo')}
