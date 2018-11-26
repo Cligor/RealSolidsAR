@@ -96,13 +96,14 @@ def enableProguardInReleaseBuilds = false
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
+    flavorDimensions "default"
 
     defaultConfig {
-        applicationId 'com.realsolid'
+        applicationId 'com.realsolid33'
         minSdkVersion 22
         targetSdkVersion 26
         multiDexEnabled true
-        versionCode 13
+        versionCode 14
         versionName "1.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
