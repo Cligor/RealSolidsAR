@@ -32,9 +32,9 @@ export default class CilindroAR extends Component {
                   castsShadow={true} 
                 />
                 <Viro3DObject
-                  source={require('../obj/cilindro.obj')}
-                  resources={[require('../obj/cilindro.mtl'),
-                              require('../obj/cilindro.png')]}
+                  source={require('../obj/piramide.obj')}
+                  resources={[require('../obj/piramide.mtl'),
+                              require('../obj/piramide.png')]}
                   position={[0, 0, -3]}
                   scale={[.2, .2, .2]}
                   styles={styles.object}

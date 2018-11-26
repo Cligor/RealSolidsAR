@@ -17,10 +17,12 @@ export default class CuboAR extends Component {
       <ViroARScene onTrackingUpdated={this._onInitialized} >
         <ViroAmbientLight color={"#FFFFFF"} />
                 <Viro3DObject
-                  source={require('../obj/cubo.vrx')}
+                  source={require('../obj/cubo.obj')}
+                  resources={[require('../obj/cubo.mtl'),
+                              require('../obj/cubo.png')]}
                   position={[-.5, .5, -1]}
                   scale={[.2, .2, .2]}
-                  type="VRX" />
+                  type="OBJ" />
       </ViroARScene>
     );
   }

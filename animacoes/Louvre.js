@@ -3,7 +3,7 @@ import { StyleSheet, View, Dimensions, TouchableOpacity, Image } from 'react-nat
 import Video from 'react-native-video';
 import { Actions } from 'react-native-router-flux';
 import next from '../images/icons/next.png';
-import AR from '../ar/ConeAR';
+import AR from '../ar/PiramideQuadradaAR';
 
 export default class ConeCerto extends Component {
 

@@ -31,11 +31,10 @@ export default class HelloWorldSceneAR extends Component {
                     <Viro3DObject
                       source={require('../obj/paralelepipedo.obj')}
                       resources={[require('../obj/paralelepipedo.mtl'),
-                                 require('../obj/paralelepipedo.png') ]}
+                                  require('../obj/paralelepipedo.png')]}
                       position={[0, 0, -3]}
                       scale={[.2, .2, .2]}
                       styles={styles.object}
-                      // materials={['heart']}
                       type="OBJ" 
                     />
         </ViroARScene>
